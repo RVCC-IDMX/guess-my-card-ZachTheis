@@ -18,10 +18,31 @@ import './style.css';
 
 const farewell = document.querySelector('.farewell');
 const suits = ['hearts', 'spades', 'diamonds', 'clubs'];
+/* const cardCodes = {
+  hearts: 0,
+  spades: 1,
+  diamonds: 2,
+  clubs: 3,
+}; */
 
 while (confirm('Would you like to play the game?')) {
-  // Put your code in this while loop
-  // Remember to use prompt and alert
+  const cardInt = getRandomInt(0, 4);
+  console.log(`cardInt: ${cardInt}`);
+  console.log(suits[cardInt]);
+  const response = prompt(
+    'Please enter your guess: Hearts, Spades, Diamonds, Clubs'
+  );
+  console.log(`Response: ${response}`);
+  console.log(`Index of response: ${suits.indexOf(response.toLowerCase())}`);
+  console.log(
+    `Equality test: ${suits.indexOf(response.toLowerCase()) === suits[cardInt]}`
+  );
+
+  if (suits.indexOf(response.toLowerCase()) === suits[cardInt]) {
+    alert('Congratulations! You guessed correctly!');
+  } else {
+    alert("Sorry, that's not right.");
+  }
 }
 
 farewell.innerHTML = '<h1>Thanks for playing!<h1>';
