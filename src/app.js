@@ -35,11 +35,13 @@ while (confirm('Would you like to play the game?')) {
   console.log(`Response: ${response}`);
   console.log(`Index of response: ${suits.indexOf(response.toLowerCase())}`);
   console.log(
-    `Equality test: ${suits.indexOf(response.toLowerCase()) === suits[cardInt]}`
+    `Equality test: ${suits.indexOf(response.toLowerCase()) === cardInt}`
   );
 
-  if (suits.indexOf(response.toLowerCase()) === suits[cardInt]) {
+  if (suits.indexOf(response.toLowerCase()) === cardInt) {
     alert('Congratulations! You guessed correctly!');
+  } else if (suits.indexOf(response.toLowerCase()) === -1) {
+    alert("That's not a valid response. Try again!");
   } else {
     alert("Sorry, that's not right.");
   }
