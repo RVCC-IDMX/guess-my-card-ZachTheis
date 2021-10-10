@@ -18,12 +18,6 @@ import './style.css';
 
 const farewell = document.querySelector('.farewell');
 const suits = ['hearts', 'spades', 'diamonds', 'clubs'];
-/* const cardCodes = {
-  hearts: 0,
-  spades: 1,
-  diamonds: 2,
-  clubs: 3,
-}; */
 
 while (confirm('Would you like to play the game?')) {
   const cardInt = getRandomInt(0, 4);
